@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Reign - Multipurpose Template</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300,400">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400">
+
+	<link href="assets/css/prettify.css" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container main">
+		<div class="row">
+
+			<div class="col-md-3">
+
+				<div class="sidebar hidden-print my_affix" role="complementary" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+					<ul class="nav sidenav">
+						<li class="active"><a href="#introduction">Introduction</a></li>
+						<li><a href="#contact">Contact form</a></li>
+						<li><a href="#mailChimp">Configuring MailChimp</a></li>
+						<li><a href="#maps">Google Maps</a></li>
+						<li><a href="#plugins">Plugins settings</a></li>
+						<li><a href="#attribution">Attribution</a></li>
+						<li><a href="#changelog">Changelog</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="col-md-9">
+
+				<section class="header" id="introduction">
+					<h1>REiGN - Documentation</h1>
+				</section>
+				<br/><br/>
+				<section class="section">
+					<div class="well-lg alert alert-success">
+						<h4>Good Day!</h4>
+						<p>Thank you for choosing our template - REiGN. If you have any questions please feel free to email <a target="_blank" href="mailto:info@themewagon.com">here</a>.</p>
+					</div>
+
+					<!-- Customization -->
+
+
+
+					<h2 id="contact">Contact form</h2>
+					<p>Open the file <strong>./php/contact-form.php</strong> and enter your data:</p>
+
+					<pre class="prettyprint lang-basic">
+// Your email
+$to = 'info@themewagon.com';
+$subject = 'Contact Form : Reign - Agency Portfolio Website Template';
+					</pre>
+<br/>
+					<h4>If Contact form form not working</h4>
+					<p>You need to check is PHP mail() function working.</p>
+<p>
+<textarea class="form-control" rows="4" style="widht:100%">
+<?php
+	mail('you@yourmail.com','Test mail','The mail function is working!');
+	echo 'Mail sent!';
+?>
+</textarea>
+</p>
+					<ul>
+					<li>Save this code as mailtest.php</li>
+						<li>change you@yourmail.com to your e-mail address</li>
+						<li>upload mailtest.php to your server</li>
+						<li>open mailtest.php in your browser (http://yourwebsite.com/mailtest.php)</li>
+						<li>check your inbox to see if a test message arrived.</li>
+					</ul>
+					<strong>If it works:</strong>
+
+					<ul>
+						<li>double-check your form script for errors (like e-mail address misspelling)</li>
+						<li>use the same e-mail address as your form recipient</li>
+						<li>double-check your SPAM filters and SPAM/Junk/Bulk mailboxes</li>
+					</ul>
+
+					<strong>If it not</strong>
+
+					<p>Contact your host and ask them to check PHP mail() setting.</p>
+
+
+
+					<h2 id="mailChimp">Configuring MailChimp</h2>
+					<p>Open the file <strong>./php/subscribe.php</strong> and enter your data:</p>
+
+					<pre class="prettyprint lang-basic">
+// MailChimp
+$APIKey = '53bb3bcad3947b9c5b45884b439097f4-us3';
+$listID = 'fd1b8baf3f;
+					</pre>
+
+					<div>Grab an API Key from <a target="_blank" href="http://admin.mailchimp.com/account/api/">http://admin.mailchimp.com/account/api/</a></div>
+					<div>Grab your List's Unique Id by going to <a target="_blank" href="http://admin.mailchimp.com/lists/">http://admin.mailchimp.com/lists/</a></div>
+					<br/>
+					<div class="alert alert-danger">
+						<strong>PLEASE DO NOT USE THE EXISTING API KEY OR LIST ID</strong>
+					</div>
+
+
+
+					<h2 id="maps">Google Maps</h2>
+					<p>Open the file <strong>./assets/js/main.js</strong> and it with your data:</p>
+
+					<pre class="prettyprint lang-js">
+/*------------------------------------------
+ 	Google Map
+ ------------------------------------------*/
+
+// The latitude and longitude to center the map (always required)
+center: new google.maps.LatLng(40.6700, -73.9400), // New York
+					</pre>
+
+
+
+					<h2 id="plugins">Plugins settings</h2>
+					<p>All plugins setting is in file <strong>./assets/js/main.js</strong></p>
+					<ul>
+						<li><a target="_blank" href="https://github.com/imakewebthings/waypoints">WayPoints</a> - Progress bars, Fun Facts Counter</li>
+						<li><a target="_blank" href="http://www.thepetedesign.com/demos/jquery_super_simple_text_rotator_demo.html">Text rotator</a> - Intro Text Rotator</li>
+						<li><a target="_blank" href="https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties">FlexSlider</a> - Sliders</li>
+						<li><a target="_blank" href="http://owlgraphic.com/owlcarousel/#how-to">OWL Carousel</a> - Testimonial carousel, client logos carousel</li>
+						<li><a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">Magnific-popup</a> - Footer Gallery Widget</li>
+						<li><a target="_blank" href="https://github.com/pupunzi/jquery.mb.YTPlayer">Video background</a> - Intro Video Background</li>
+						<li><a target="_blank" href="http://isotope.metafizzy.co">Isotope</a> - Filterable Portfolio</li>
+					</ul>
+					<p>If you have any questions please feel free to email here&nbsp;info@themewagon.com</p>
+
+
+
+					<h2 id="attribution">Attribution</h2>
+					<p>Following libraries and plugins are used in Reign:</p>
+					<ul>
+						<li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+						<li><a href="http://getbootstrap.com" target="_blank">Bootstrap</a></li>
+						<li><a href="https://github.com/galambalazs/smoothscroll" target="_blank">SmoothScroll v0.9.9</a></li>
+						<li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a> </li>
+						<li><a href="http://fontawesome.io/" target="_blank">Fontawesome</a></li>
+						<li><a href="http://ionicons.com/" target="_blank">Fontawesome</a></li>
+						<li><a href="http://isotope.metafizzy.co" target="_blank">Isotope</a></li>
+						<li><a href="https://github.com/desandro/imagesloaded" target="_blank">imagesLoaded</a></li>
+						<li><a href="https://github.com/woothemes/FlexSlider/" target="_blank">FlexSlider</a></li>
+						<li><a href="https://github.com/pupunzi/jquery.mb.YTPlayer" target="_blank">jquery.mb.YTPlayer</a></li>
+						<li><a href="http://owlgraphic.com/owlcarousel/" target="_blank">Owlcarousel</a></li>
+						<li><a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">Magnific-popup</a></li>
+						<li><a target="_blank" href="https://github.com/imakewebthings/waypoints">WayPoints</a></li>
+					</ul>
+					<br/><br/>
+					<p>Images used in preview are taken from following websites:</p>
+					<ul>
+						<li><a href="https://pixabay.com/">Pixabay</a></li>
+						<li><a href="https://unsplash.com/">Unsplash</a></li>
+						<li><a href="http://www.imcreator.com/free">iMCreator</a></li>
+					</ul>
+
+
+
+
+					<h2 id="changelog">Changelog</h2>
+
+					<p> Version 1.1</p>
+					<pre class="prettyprint">- Video Mute Button Fixed</pre>
+					<pre class="prettyprint">- Video Background Image Fixed</pre>
+					<pre class="prettyprint">- Typo Mistakes fixed</pre>
+
+					<p> Version 1.0</p>
+					<pre class="prettyprint">- Initial Release</pre>
+
+						
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascript files -->
+	<!-- jQuery -->
+	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!--HL -->
+	<script src="assets/js/prettify/prettify.js"></script>
+	<!-- Custom scripts -->
+	<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
