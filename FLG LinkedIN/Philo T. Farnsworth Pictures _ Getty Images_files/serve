@@ -1,0 +1,10 @@
+(function(){	try {		var tagContainer = document.createElement('div');		tagContainer.style.display = 'none';		tagContainer.innerHTML = '';		document.body.appendChild(tagContainer);		var tempScripts = tagContainer.getElementsByTagName('script');		for (var i = 0; i < tempScripts.length; i++) {
+			var newScript = document.createElement('script');
+			var s = tempScripts[i];
+			if (typeof s.src != "undefined" && s.src.length > 0) {
+				newScript.src = s.src
+			} else { 
+	    	    newScript.innerHTML = s.innerHTML;
+			}			document.body.appendChild(newScript);
+		}
+		document.body.appendChild(tagContainer);	} catch (e) {		/* don't blow anything up */	}})();(function(){var a=document.createElement("img");a.setAttribute("src","https://p.adsymptotic.com/d/px/?_pid=14367&_psign=58058d51c159ecf7c043e8034b368ab7&_puuid=47ac9a52-550b-45a3-bb62-6cb990ad1eab&_redirect=&_rand=1755678785");a.setAttribute("height","0");a.setAttribute("width","0");var b=document.getElementById("sh_target_ec634b4b-15df-45f4-85a4-815504635da0");if(b!=null){b.appendChild(a)}})();
