@@ -2,11 +2,8 @@ import json
 
 filename = 'slideList.txt'
 
-def readFile():
-	file = open(filename, mode='r')
-	text = file.read()
-	file.close()
-	return text
+with open('slideList.txt', 'r') as my_file:
+    testObjects = my_file.read()
 
 testList = [
     {"filename": "Test1.png",
@@ -23,7 +20,15 @@ testList = [
     "Filler Status": False }
 ]
 
+# readFile()
+print(testObjects[0]['content'])
 
-slideList = readFile()
-print(slideList[0]['content'])
+# my_list = [i ** 2 for i in range(1, 11)]
 
+# my_file = open("output.txt", "r+")
+
+# # Add your code below!
+# for i in my_list:
+#   my_file.write(str(i) + "\n")
+  
+# my_file.close()
