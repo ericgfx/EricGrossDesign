@@ -1,9 +1,12 @@
 
 import os
+
 xDirectory = '//Users/erimacbookpro/EricGrossDesign/CodeForSutterScreens/'
 Directory = '.'
 OldFilename = 'Slide1.png'
 NewFilename = 'Filler01.png'
+
+MacDirectory = '//Users/grosse/GitHub OfficeMac/EricGrossDesign/CodeForSutterScreens'
 
 
 def join(Directory,Filename):
@@ -19,7 +22,8 @@ def changeName(OldFilename,NewFilename,Directory):
 	for filename in os.listdir(Directory):
 		os.rename(OldFilename, NewFilename)
 
-
+def runTest():
+	
 changeName(OldFilename,NewFilename,Directory)
 
 
