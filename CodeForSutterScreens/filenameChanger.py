@@ -25,7 +25,7 @@ def runTest(OldFilename,NewFilename,Directory):
 		print "Preparing to rename"
 		changeName(OldFilename,NewFilename)
 	elif not existsOld:
-		print "File ",OldFilename," does not exist"
+		print "File named",OldFilename,"does not exist"
 	elif existsNew:
 		print "File already exists"
 
