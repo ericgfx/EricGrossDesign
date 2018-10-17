@@ -3,8 +3,8 @@ from os.path import join, isfile
 
 # Global Variables for testing only.
 Directory = '.'
-OldFilename = 'Slide01.png'
-NewFilename = 'Filler01.png'
+OldFilename = 'Slide1.png'
+NewFilename = 'Filler1.png'
 
 
 def joinDirectoryAndName(Directory,Filename):
@@ -31,6 +31,8 @@ def runTest(OldFilename,NewFilename,Directory):
 
 
 runTest(OldFilename,NewFilename,Directory)
+
+
 
 # Results:
 #// Successfully changes the name of the file.
