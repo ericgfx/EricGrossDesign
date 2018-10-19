@@ -1,12 +1,16 @@
 {
     "slide1": {
         "content": "key_dates",
-        "end": "Mar. 3",
-        "filename": "Slide1.PNG"
+        "end": [
+            2019,
+            3,
+            2
+        ],
+        "fileName": "Slide1.PNG"
     },
     "slide2": {
         "content": "key_dates",
         "end": "Mar. 3",
-        "filename": "Slide1.PNG"
+        "fileName": "Slide1.PNG"
     }
 }

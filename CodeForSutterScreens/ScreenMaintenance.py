@@ -1,34 +1,50 @@
+# -*- coding: utf-8 -*-
 import json
+from datetime import date
 
-filename = 'slideList.txt'
+# Make it work for Python 2+3 and with Unicode
+import io
+try:
+    to_unicode = unicode
+except NameError:
+    to_unicode = str
 
-with open('slideList.txt', 'r') as my_file:
-    testObjects = my_file.read()
+# Define data
+class MySlide:
+    def __init__(self,fileName,content,endDate,fillerStatus):
+        self.fileName = fileName
+        self.content = content
+        self.endDate = endDate
+        self.fillerStatus = fillerStatus
+        
 
-testList = [
-    {"filename": "Test1.png",
-    "content": 'TestContent1',
-    "startDate":'01/01/2018',
-    "endDate": '03/03/2019',
-    "Filler Status": False 
-    },
-    {
-    "filename": "Test2.png",
-    "content": 'TestContent2',
-	"startDate":'01/01/2018',
-    "endDate": '01/01/2018',
-    "Filler Status": False }
-]
+data = {'slide1': {'fileName': 'Slide1.PNG',
+                   'content': 'key_dates',
+                   'end': [2019, 3, 2]},
+        'slide2': {'fileName': 'Slide1.PNG',
+                   'content': 'key_dates',
+                   'end': 'Mar. 3'}
+                   }
+print data['slide1']['end']
 
-# readFile()
-print(testObjects[0]['content'])
+# Write JSON file
+with io.open('data.json', 'w', encoding='utf8') as outfile:
+    str_ = json.dumps(data,
+                      indent=4, sort_keys=True,
+                      separators=(',', ': '), ensure_ascii=False)
+    outfile.write(to_unicode(str_))
 
-# my_list = [i ** 2 for i in range(1, 11)]
+# Read JSON file
+with open('data.json') as data_file:
+    data_loaded = json.load(data_file)
 
-# my_file = open("output.txt", "r+")
+print(data == data_loaded)
 
-# # Add your code below!
-# for i in my_list:
-#   my_file.write(str(i) + "\n")
-  
-# my_file.close()
+print data_loaded['slide1']['end']
+
+AddASlide = True
+while AddASlide:
+  TestSlide = MySlide('Slide3.PNG','Eric Test Slide','Mar. 3',True)
+  print(TestSlide)
+  print("Converting AddASlide")
+  AddASlide = False
