@@ -1,0 +1,141 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size:16px;
+}
+
+@media (max-width: 500px) {
+  ul li {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header{
+  background-color:#30627E;
+  color:#fff;
+}
+
+.header .active{
+  font-size:28px;
+  background-color: #e52364;
+}
+
+.header ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header li{
+  font-size:20px;
+  display:inline-block; /*this threw me*/
+  margin: 0px;
+  text-align:center;
+  padding:20px 30px;
+}
+
+.header li:hover{
+background-color: #000;
+transition-duration: 0.5s;
+
+}
+
+.jumbotron {
+  background:url(https://s3.amazonaws.com/codecademy-content/projects/adoptly/bg.jpg) no-repeat center center;
+ background-size: cover; /******Gr. This got me too.***/
+ height: 500px;
+ text-align: center;
+ margin-bottom: 0;
+  }
+
+  .jumbotron h1{
+  font-size:3.9rem;
+  font-weight:bold;
+  color:#e52364;
+  }
+
+.supporting{
+  text-align:center;
+  color:#333;
+  padding:30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.supporting p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    min-height: 80px;
+}
+
+.supporting h2 {
+    color: #333;
+    font-size: 30px;
+    margin-top: 0; /*I didn't think of this*/
+}
+
+.btn{
+    font-size: 16px;
+    border-radius:0px;
+    padding: 10px 20px;
+    margin: 20px auto 60px;
+    color: #30627E;
+    width:180px;
+    border: 1px solid #30627E;
+    text-transform: uppercase;
+}
+
+.copy{
+  padding: 29px 10px;
+}
+
+footer a{
+  color:#fff;
+  font-size: 14px;
+}
+
+footer{
+  background-color:#e52364;
+  color:#fff;
+  padding: 20px 0px;
+}
+
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    }
+
+footer ul li{  
+  display:inline-block;
+  margin: 0px;
+  text-align:center;
+  padding:20px 30px;
+  }
+/*******this part threw me for a minute**************/
+@media (min-width: 500px) {
+ .left{
+ float:left;
+ text-align:center;
+
+}
+
+.right{
+  float:right;
+}
+}
+
+@media (max-width: 500px) {
+ .left{
+  text-align:center;
+  padding:0;
+}
+}
